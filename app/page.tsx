@@ -1,101 +1,150 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import logow from "@/public/logowhite.svg"
+import wa from "@/public/WhatsApp.svg"
+
+import fb1 from "@/public/png/fb1.png"
+import fb2 from "@/public/png/fb2.webp"
+import fb3 from "@/public/png/fb3.webp"
+import fb4 from "@/public/png/fb4.png"
+import fb5 from "@/public/png/fb5.png"
+import fb6 from "@/public/png/fb6.webp"
+import fb7 from "@/public/png/fb7.webp"
+import testi from "@/public/png/testi.png"
+import fb8 from "@/public/png/fb7.jpg"
+import gif from "@/public/png/GIF1.gif"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="w-full max-w-[425px] mx-auto">
+      <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src={logow}
+          alt=""
+          width={200}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      </header>
+      <div className="bg-white">
+        <div className="mx-3 py-4">
+          <Image
+            src={fb1}
+            alt=""
+            className="rounded-lg"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="flex flex-col justify-center items-center">
+          <p className="font-bold text-3xl mb-2">ALAT PEL PRAKTIS</p>
+          <p className="text-xl text-center mb-8">Hanya Dengan Satu Tarikan Dapat Mengeringkan dan Membilas Seketika</p>
+          <p className="text-gray-500 line-through decoration-red-500 font-bold text-xl mb-4">Rp 195.000</p>
+          <p className="text-[#ce0000] font-bold text-5xl animate-bounce mb-5">Rp 99.000</p>
+        </div>
+        <div className="mx-3 pt-4 mb-8">
+          <Image
+            src={fb2}
+            alt=""
+            className="w-full rounded-lg"
+          />
+        </div>
+        <div className="mx-3">
+          <p className="text-xl text-center mb-8">Solusi inovatif untuk membersihkan rumah Anda dengan lebih efisien dan mudah. Dengan kepala pel yang dapat berputar 360°, alat ini memungkinkan Anda untuk mencapai setiap sudut ruangan, bahkan di bawah tempat-tempat yang sulit dijangkau seperti tempat tidur atau sofa. Menghindari penumpukan debu dan membantu membersihkan rumah Anda tanpa menyisakan kotoran di sudut.</p>
+        </div>
+        <div className="bg-[#ce0000] text-white text-center text-2xl font-bold py-6">
+          Kenapa Harus Memakai Alat Pel Praktis ini?
+        </div>
+        <div className="mt-8 mx-3">
+          <p className="text-lg font-semibold mb-2">1. 360 Derajat Kepala Pel Yang Fleksible</p>
+          <p>Memungkinkan Anda Membersihkan Ruangan dengan Semua Arah Tanpa Kesulitan, Mencapai Sudut Sudut Yang Sulit diJangkau dan Memastikan Kebersihan Menyeluruh.</p>
+          <Image
+            src={fb3}
+            alt=""
+            className="w-full rounded-lg mt-4"
+          />
+        </div>
+        <div className="mt-8 mx-3">
+          <p className="text-lg font-semibold mb-2">2. Desain Yang bisa Menyelip</p>
+          <p>Bisa Masuk dan Keluar dari bawah Tempat Tidur, Sofa, Atau Perabot Lainnya dengan Mudah, Memberikan Kemampuan Untuk Membersihkan Area Yang biasanya Sulit diJangkau.</p>
+          <Image
+            src={fb4}
+            alt=""
+            className="w-full rounded-lg mt-4"
+          />
+        </div>
+        <div className="mt-8 mx-3">
+          <p className="text-lg font-semibold mb-2">3. Penyimpanannya Yang Mudah</p>
+          <p>Terdapat Kait di Bagian Atas Pegangan, Memungkinkan Anda Menggantung Alat Pel Secara Vertikal di Dinding Saat Tidak di Gunakan, Sehingga Menghemat Ruang Penyimpanan dan Mempermudah Akses.</p>
+          <Image
+            src={fb5}
+            alt=""
+            className="w-full rounded-lg mt-4"
+          />
+        </div>
+        <div className="pb-10 mt-8 mx-3">
+          <p className="text-lg font-semibold mb-2">4. Di Lengkapi dengan Kain Mikrofiber</p>
+          <p>Di Sertakan 2 Kain Mikrofiber Yang Memiliki Kemampuan Penyerapan Air Tinggi, Membantu Membersihkan Debu, Kotoran dan Noda dengan Efisien.</p>
+          <Image
+            src={fb6}
+            alt=""
+            className="w-full rounded-lg mt-4"
+          />
+        </div>
+      </div>
+      <div className="bg-[#ce0000] text-white text-center text-2xl font-bold py-6">
+        KATA MEREKA YANG SUDAH MENGGUNAKAN PEL PRAKTIS ACLINE INI
+      </div>
+      <div className="pb-8 mt-4 mx-3">
+        <Image
+          src={testi}
+          alt=""
+          className="w-full rounded-lg mt-4"
+        />
+      </div>
+      <div className="bg-[#ce0000] text-white text-center text-2xl font-bold py-6">
+        SUDAH TERJUAL RIBUAN PCS DAN SEMUANYA PUAS
+      </div>
+      <div className="pb-8 mt-4 mx-3">
+        <Image
+          src={fb8}
+          alt=""
+          className="w-full rounded-lg mt-4"
+        />
+      </div>
+      <div className="pb-8 mt-4 mx-3">
+        <Image
+          src={fb7}
+          alt=""
+          className="w-full rounded-lg mt-4"
+        />
+      </div>
+      <div className="mx-3">
+        <h1 className="text-center font-bold text-4xl text-[#ce0000] mt-8">PROMO PRODUK</h1>
+        <p className="text-center text-lg font-semibold text-[#ce0000] mb-10">(KHUSUS PEMESANAN HARI INI)</p>
+        <p className="text-gray-500 line-through decoration-red-500 font-bold text-xl mb-4 text-center">Rp 195.000</p>
+        <p className="text-[#ce0000] font-bold text-5xl animate-bounce mb-5 text-center">Rp 99.000</p>
+        <h1 className="text-center font-bold text-3xl text-[#ce0000] mt-8">HANYA HARI INI SAJA</h1>
+      </div>
+
+      <div className="pb-28 mx-3 ps-5">
+        <Image
+          src={gif}
+          alt=""
+          className="w-full rounded-lg mt-4"
+        />
+      </div>
+      <div>
+        <Link
+          href={""}
+          className="flex fixed bottom-0 right-0 bg-green-500 text-white p-4 shadow-lg z-50 hover:bg-green-600 transition duration-300 w-full text-center text-2xl font-bold items-center justify-center"
         >
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            alt=""
+            src={wa}
+            width={50}
+            className="me-2"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          Klik Untuk Order
+        </Link>
+      </div>
     </div>
   );
 }
