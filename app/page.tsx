@@ -133,7 +133,7 @@ export default function Home() {
       </div>
       <div>
         <Link
-          href={""}
+          href={"https://wa.me/6285360027891"}
           className="flex fixed bottom-0 right-0 bg-green-500 text-white p-4 shadow-lg z-50 hover:bg-green-600 transition duration-300 w-full text-center text-2xl font-bold items-center justify-center"
         >
           <Image
