@@ -20,9 +20,6 @@ import gif from "@/public/png/GIF1.gif"
 import { fbq } from "react-facebook-pixel";
 
 export default function Home() {
-  const PixelTracker = dynamic(() => import("../components/fbpiksel"), {
-    ssr: false,
-  });
   return (
     <div className="w-full max-w-[425px] mx-auto">
       <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
@@ -139,7 +136,6 @@ export default function Home() {
         />
       </div>
       <div>
-        <PixelTracker />
         <Link
           onClick={() => {
             // Pelacakan klik pada tombol WhatsApp
