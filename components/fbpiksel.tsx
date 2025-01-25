@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect } from "react";
-import ReactPixel, { fbq } from "react-facebook-pixel";
+import ReactPixel from "react-facebook-pixel";
 
 const PixelTracker = () => {
   useEffect(() => {
@@ -11,24 +11,7 @@ const PixelTracker = () => {
     ReactPixel.pageView();
   }, []);
 
-  const handleWhatsAppClick = () => {
-    if (typeof fbq !== "undefined") {
-      fbq("track", "InitiateCheckout", {
-        content_name: "WhatsApp Order Button",
-        content_category: "Contact",
-        value: 0,
-        currency: "IDR",
-      });
-    }
-  };
-
-  return (
-    <div>
-      <button onClick={handleWhatsAppClick} style={{ display: "none" }}>
-        Track Click
-      </button>
-    </div>
-  );
+  return null
 };
 
 export default PixelTracker;
