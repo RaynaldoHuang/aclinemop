@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
+import PixelTracker from "../components/PixelTrackerClient"; // Import the client component
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,14 +18,11 @@ export const metadata: Metadata = {
   description: "Solusi inovatif untuk membersihkan rumah Anda dengan lebih efisien dan mudah. Dengan kepala pel yang dapat berputar 360°, alat ini memungkinkan Anda untuk mencapai setiap sudut ruangan, bahkan di bawah tempat-tempat yang sulit dijangkau seperti tempat tidur atau sofa. Menghindari penumpukan debu dan membantu membersihkan rumah Anda tanpa menyisakan kotoran di sudut.",
 };
 
-const PixelTracker = dynamic(() => import("../components/PixelTracker"), { ssr: false });
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <head>
@@ -34,8 +31,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?                         
-              n.callMethod.apply(n,arguments):n.queue.push   
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push
               (arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!
               0;n.version='2.0';n.queue=[];t=b.createElement(e);
               t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
@@ -52,15 +49,13 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1793750594713308&ev=
-            PageView&noscript=1"/>
+            src="https://www.facebook.com/tr?id=1793750594713308&ev=PageView&noscript=1"
+          />
         </noscript>
         {/* End Meta Pixel Code */}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-         <PixelTracker />
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <PixelTracker />
         {children}
       </body>
     </html>
