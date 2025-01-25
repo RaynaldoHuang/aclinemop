@@ -18,6 +18,9 @@ import fb8 from "@/public/png/fb7.jpg"
 import gif from "@/public/png/GIF1.gif"
 import { fbq } from "react-facebook-pixel";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const FacebookPixel = dynamic(() => import("../app/facebookPixel"), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
@@ -33,9 +36,10 @@ export default function Home() {
       fbq('track', 'InitiateCheckout');
     }
   };
-  
+
   return (
     <div className="w-full max-w-[425px] mx-auto">
+      <FacebookPixel />
       <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
         <Image
           src={logow}
