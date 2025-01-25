@@ -15,15 +15,22 @@ import testi from "@/public/png/testi.png"
 import fb8 from "@/public/png/fb7.jpg"
 import gif from "@/public/png/GIF1.gif"
 import { fbq } from "react-facebook-pixel";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // Pastikan kode hanya dijalankan di client-side
+    if (typeof window !== "undefined" && typeof fbq !== "undefined") {
+      // Inisialisasi atau penggunaan fbq di sini
+      // Event tracking dilakukan di sini
+    }
+  }, []); // Kosongkan array dependensi agar efek hanya dijalankan sekali setelah komponen ter-render
+
   const handleCheckoutClick = () => {
-    // Menambahkan Facebook Pixel event 'InitiateCheckout'
-    if (typeof fbq !== "undefined") {
+    // Pastikan fbq hanya dipanggil di sisi klien
+    if (typeof window !== "undefined" && typeof fbq !== "undefined") {
       fbq('track', 'InitiateCheckout');
     }
-
-    window.location.href = '/checkout';
   };
   return (
     <div className="w-full max-w-[425px] mx-auto">
