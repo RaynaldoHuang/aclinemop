@@ -21,19 +21,19 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    // Pastikan kode hanya dijalankan di client-side
+    // Check if the window object exists to ensure this runs on the client side
     if (typeof window !== "undefined" && typeof fbq !== "undefined") {
-      // Inisialisasi atau penggunaan fbq di sini
-      // Event tracking dilakukan di sini
+      fbq('track', 'PageView');
     }
-  }, []); // Kosongkan array dependensi agar efek hanya dijalankan sekali setelah komponen ter-render
+  }, []); // Empty dependency array to run once after initial render
 
   const handleCheckoutClick = () => {
-    // Pastikan fbq hanya dipanggil di sisi klien
+    // Make sure fbq is only called on the client side
     if (typeof window !== "undefined" && typeof fbq !== "undefined") {
       fbq('track', 'InitiateCheckout');
     }
   };
+  
   return (
     <div className="w-full max-w-[425px] mx-auto">
       <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
