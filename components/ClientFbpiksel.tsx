@@ -1,3 +1,5 @@
+'use client';  // This marks the component as a Client Component
+
 import dynamic from "next/dynamic";
 
 const PixelTracker = dynamic(() => import("../components/fbpiksel"), { ssr: false });
