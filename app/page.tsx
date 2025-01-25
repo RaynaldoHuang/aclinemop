@@ -20,7 +20,7 @@ import { fbq } from "react-facebook-pixel";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 
-const FacebookPixel = dynamic(() => import("../app/facebookPixel"), { ssr: false });
+const FacebookPixel = dynamic(() => import("../app/facebookpixel"), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
