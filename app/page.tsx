@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import logow from "@/public/logowhite.svg"
 import wa from "@/public/WhatsApp.svg"
+import dynamic from "next/dynamic";
 
 import fb1 from "@/public/png/fb1.png"
 import fb2 from "@/public/png/fb2.webp"
@@ -17,9 +18,11 @@ import testi from "@/public/png/testi.png"
 import fb8 from "@/public/png/fb7.jpg"
 import gif from "@/public/png/GIF1.gif"
 import { fbq } from "react-facebook-pixel";
-import PixelTracker from "@/components/fbpiksel";
 
 export default function Home() {
+  const PixelTracker = dynamic(() => import("../components/fbpiksel"), {
+    ssr: false,
+  });
   return (
     <div className="w-full max-w-[425px] mx-auto">
       <PixelTracker />
