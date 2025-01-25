@@ -22,6 +22,8 @@ export default function Home() {
     if (typeof fbq !== "undefined") {
       fbq('track', 'InitiateCheckout');
     }
+
+    window.location.href = '/checkout';
   };
   return (
     <div className="w-full max-w-[425px] mx-auto">
