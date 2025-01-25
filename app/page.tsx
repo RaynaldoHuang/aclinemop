@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import logow from "@/public/logowhite.svg"
 import wa from "@/public/WhatsApp.svg"
-import dynamic from "next/dynamic";
 
 import fb1 from "@/public/png/fb1.png"
 import fb2 from "@/public/png/fb2.webp"
