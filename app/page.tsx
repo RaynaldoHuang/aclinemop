@@ -14,8 +14,21 @@ import fb7 from "@/public/png/fb7.webp"
 import testi from "@/public/png/testi.png"
 import fb8 from "@/public/png/fb7.jpg"
 import gif from "@/public/png/GIF1.gif"
+import { fbq } from "react-facebook-pixel";
 
 export default function Home() {
+
+  const handleWhatsAppClick = () => {
+    if (typeof fbq !== "undefined") {
+      fbq("track", "InitiateCheckout", {
+        content_name: "WhatsApp Order Button",
+        content_category: "Contact",
+        value: 0, // Tambahkan nilai transaksi jika relevan
+        currency: "IDR", // Mata uang, jika relevan
+      });
+    }
+  };
+  
   return (
     <div className="w-full max-w-[425px] mx-auto">
       <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
@@ -133,6 +146,7 @@ export default function Home() {
       </div>
       <div>
         <Link
+          onClick={handleWhatsAppClick}
           href={"https://wa.me/6285360027891"}
           className="flex fixed bottom-0 right-0 bg-green-500 text-white p-4 shadow-lg z-50 hover:bg-green-600 transition duration-300 w-full text-center text-2xl font-bold items-center justify-center"
         >
