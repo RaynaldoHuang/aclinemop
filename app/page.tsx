@@ -25,7 +25,6 @@ export default function Home() {
   });
   return (
     <div className="w-full max-w-[425px] mx-auto">
-      <PixelTracker />
       <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
         <Image
           src={logow}
@@ -140,6 +139,7 @@ export default function Home() {
         />
       </div>
       <div>
+        <PixelTracker />
         <Link
           onClick={() => {
             // Pelacakan klik pada tombol WhatsApp
