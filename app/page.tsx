@@ -16,6 +16,7 @@ import fb7 from "@/public/png/fb7.webp"
 import testi from "@/public/png/testi.png"
 import fb8 from "@/public/png/fb7.jpg"
 import gif from "@/public/png/GIF1.gif"
+import PixelTracker from "@/components/PixelTracker";
 
 export default function Home() {
   return (
@@ -138,6 +139,7 @@ export default function Home() {
           href={"https://wa.me/6285360027891"}
           className="flex fixed bottom-0 right-0 bg-green-500 text-white p-4 shadow-lg z-50 hover:bg-green-600 transition duration-300 w-full text-center text-2xl font-bold items-center justify-center"
         >
+          <PixelTracker />
           <Image
             alt=""
             src={wa}
