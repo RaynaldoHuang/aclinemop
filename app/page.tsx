@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
 import logow from "@/public/logowhite.svg"
 import wa from "@/public/WhatsApp.svg"
@@ -18,21 +17,9 @@ import testi from "@/public/png/testi.png"
 import fb8 from "@/public/png/fb7.jpg"
 import gif from "@/public/png/GIF1.gif"
 import { fbq } from "react-facebook-pixel";
+import PixelTracker from "@/components/fbpiksel";
 
 export default function Home() {
-  const PixelTracker = dynamic(() => import("../components/fbpiksel"), { ssr: false });
-
-  const handleWhatsAppClick = () => {
-    if (typeof fbq !== "undefined") {
-      fbq("track", "InitiateCheckout", {
-        content_name: "WhatsApp Order Button",
-        content_category: "Contact",
-        value: 0, // Anda bisa menambahkan nilai transaksi jika relevan
-        currency: "IDR", // Mata uang, jika relevan
-      });
-    }
-  };
-
   return (
     <div className="w-full max-w-[425px] mx-auto">
       <PixelTracker />
@@ -151,7 +138,17 @@ export default function Home() {
       </div>
       <div>
         <Link
-          onClick={handleWhatsAppClick}
+          onClick={() => {
+            // Pelacakan klik pada tombol WhatsApp
+            if (typeof fbq !== "undefined") {
+              fbq("track", "InitiateCheckout", {
+                content_name: "WhatsApp Order Button",
+                content_category: "Contact",
+                value: 0,
+                currency: "IDR",
+              });
+            }
+          }}
           href={"https://wa.me/6285360027891"}
           className="flex fixed bottom-0 right-0 bg-green-500 text-white p-4 shadow-lg z-50 hover:bg-green-600 transition duration-300 w-full text-center text-2xl font-bold items-center justify-center"
         >
