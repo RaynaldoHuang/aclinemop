@@ -16,30 +16,10 @@ import fb7 from "@/public/png/fb7.webp"
 import testi from "@/public/png/testi.png"
 import fb8 from "@/public/png/fb7.jpg"
 import gif from "@/public/png/GIF1.gif"
-import { fbq } from "react-facebook-pixel";
-import { useEffect } from "react";
-import dynamic from "next/dynamic";
-
-const FacebookPixel = dynamic(() => import("../app/facebookpixel"), { ssr: false });
 
 export default function Home() {
-  useEffect(() => {
-    // Check if the window object exists to ensure this runs on the client side
-    if (typeof window !== "undefined" && typeof fbq !== "undefined") {
-      fbq('track', 'PageView');
-    }
-  }, []); // Empty dependency array to run once after initial render
-
-  const handleCheckoutClick = () => {
-    // Make sure fbq is only called on the client side
-    if (typeof window !== "undefined" && typeof fbq !== "undefined") {
-      fbq('track', 'InitiateCheckout');
-    }
-  };
-
   return (
     <div className="w-full max-w-[425px] mx-auto">
-      <FacebookPixel />
       <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
         <Image
           src={logow}
@@ -156,7 +136,6 @@ export default function Home() {
       <div>
         <Link
           href={"https://wa.me/6285360027891"}
-          onClick={handleCheckoutClick}
           className="flex fixed bottom-0 right-0 bg-green-500 text-white p-4 shadow-lg z-50 hover:bg-green-600 transition duration-300 w-full text-center text-2xl font-bold items-center justify-center"
         >
           <Image
