@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 import logow from "@/public/logowhite.svg"
 import wa from "@/public/WhatsApp.svg"
@@ -17,20 +18,22 @@ import gif from "@/public/png/GIF1.gif"
 import { fbq } from "react-facebook-pixel";
 
 export default function Home() {
+  const PixelTracker = dynamic(() => import("../components/fbpiksel"), { ssr: false });
 
   const handleWhatsAppClick = () => {
     if (typeof fbq !== "undefined") {
       fbq("track", "InitiateCheckout", {
         content_name: "WhatsApp Order Button",
         content_category: "Contact",
-        value: 0, // Tambahkan nilai transaksi jika relevan
+        value: 0, // Anda bisa menambahkan nilai transaksi jika relevan
         currency: "IDR", // Mata uang, jika relevan
       });
     }
   };
-  
+
   return (
     <div className="w-full max-w-[425px] mx-auto">
+      <PixelTracker />
       <header className="text-white text-center flex justify-center py-6 bg-[#ce0000]">
         <Image
           src={logow}

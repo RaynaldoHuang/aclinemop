@@ -9,6 +9,7 @@ const PixelTracker = () => {
       ReactPixel.init(pixelId);
       ReactPixel.pageView();
     }, []);
+
     return null;
   };
   export default PixelTracker;

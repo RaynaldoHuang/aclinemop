@@ -1,9 +1,12 @@
-"use client";
-
 import dynamic from "next/dynamic";
 
-const Fbpiksel = dynamic(() => import("../components/fbpiksel"), { ssr: false });
+const PixelTracker = dynamic(() => import("../components/fbpiksel"), { ssr: false });
 
-export default function ClientFbpiksel() {
-    return <Fbpiksel />;
+export default function CheckoutPage() {
+    return (
+        <div>
+            <h1>Checkout Page</h1>
+            <PixelTracker />
+        </div>
+    );
 }
