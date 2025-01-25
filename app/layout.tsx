@@ -8,6 +8,9 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const Fbpiksel = dynamic(() => import("../components/fbpiksel"), { ssr: false });
+
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -58,6 +61,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Fbpiksel />
         {children}
       </body>
     </html>
