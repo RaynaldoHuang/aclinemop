@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { initFacebookPixel, trackPageView } from '@/lib/fbpixel';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,11 +20,28 @@ export const metadata: Metadata = {
   description: "Solusi inovatif untuk membersihkan rumah Anda dengan lebih efisien dan mudah. Dengan kepala pel yang dapat berputar 360°, alat ini memungkinkan Anda untuk mencapai setiap sudut ruangan, bahkan di bawah tempat-tempat yang sulit dijangkau seperti tempat tidur atau sofa. Menghindari penumpukan debu dan membantu membersihkan rumah Anda tanpa menyisakan kotoran di sudut.",
 };
 
+const PIXEL_ID = '<YOUR_PIXEL_ID>';
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Inisialisasi Facebook Pixel
+    initFacebookPixel(PIXEL_ID);
+
+    // Track page view
+    trackPageView();
+  }, []);
+
+  useEffect(() => {
+    // Track page view setiap kali pathname berubah
+    trackPageView();
+  }, [pathname]);
+
   return (
     <html lang="en">
       <head>
