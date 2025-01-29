@@ -178,7 +178,7 @@ export default function Home() {
           Jika yang Anda terima tidak sesuai iklan / foto, tenang kami ganti uang anda 100%
         </p>
         <p className="text-center font-semibold text-base mb-2 text-blue-600">
-          Kami produksi produk ini sendiri. sehingga bisa dipastikan produk ini adalah produk dengan kualitas rendah
+          Kami produksi produk ini sendiri, sehingga bisa dipastikan produk ini adalah bukan produk dengan kualitas rendah
         </p>
       </div>
 
