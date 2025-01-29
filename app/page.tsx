@@ -97,7 +97,7 @@ export default function Home() {
           <p className="text-center mt-8 font-bold text-xl">
             HARGA ASLINYA
           </p>
-          <p className="text-center mt-2 font-bold text-5xl mb-8 line-through decoration-red-500">
+          <p className="text-center mt-2 font-bold text-4xl mb-8 line-through decoration-red-500">
             Rp.180.000/pcs
           </p>
         </div>
