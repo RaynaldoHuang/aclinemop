@@ -130,7 +130,7 @@ export default function Home() {
 
           <Link
             href={"https://wa.me/6285360027891"}
-            className="bg-orange-500 text-white text-2xl font-bold px-6 py-4 rounded-xl flex justify-center"
+            className="bg-orange-500 text-white text-xl font-bold px-6 py-4 rounded-xl flex justify-center"
           >
             BELI SEKARANG (BISA COD)
           </Link>
