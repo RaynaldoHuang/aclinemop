@@ -15,7 +15,7 @@ import fb6 from "@/public/png/img7.webp"
 import fb7 from "@/public/png/img8.png"
 import fb9 from "@/public/png/img9.png"
 import gif2 from "@/public/png/gif2.gif"
-import gif1 from "@/public/png/gif1.gif"
+import promo from "@/public/png/gifrpomo.gif" 
 import bank from "@/public/png/img5.webp"
 import ekspedisi from "@/public/png/img6.webp"
 
@@ -104,7 +104,7 @@ export default function Home() {
       </div>
 
       <Image
-        src={gif1}
+        src={promo}
         alt=""
         className="rounded-xl"
       />
