@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ALAT PEL PRAKTIS",
-  description: "Solusi inovatif untuk membersihkan rumah Anda dengan lebih efisien dan mudah. Dengan kepala pel yang dapat berputar 360°, alat ini memungkinkan Anda untuk mencapai setiap sudut ruangan, bahkan di bawah tempat-tempat yang sulit dijangkau seperti tempat tidur atau sofa. Menghindari penumpukan debu dan membantu membersihkan rumah Anda tanpa menyisakan kotoran di sudut.",
+  title: "Parutan Serbaguna 11 in 1",
+  description: "Dilengkapi 11 mata pisau stainless steel, alat ini memudahkan Anda mengiris, memotong, dan memarut dengan cepat. Solusi praktis untuk memasak tanpa ribet!",
 };
 
 export default function RootLayout({
@@ -40,7 +40,7 @@ export default function RootLayout({
               s.parentNode.insertBefore(t,s)}(window, document,
               'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1793750594713308');
+              fbq('init', '632975979278088');
               fbq('track', 'PageView');
             `,
           }}
@@ -50,7 +50,7 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1793750594713308&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=632975979278088&ev=PageView&noscript=1"
           />
         </noscript>
         {/* End Meta Pixel Code */}
